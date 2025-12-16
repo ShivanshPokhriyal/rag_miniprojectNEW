@@ -1,0 +1,35 @@
+# -------- Core Backend --------
+fastapi
+uvicorn
+
+# -------- Frontend --------
+streamlit
+requests
+
+# -------- RAG / LangChain --------
+langchain
+langchain-community
+langchain-groq
+
+# -------- Embeddings --------
+sentence-transformers
+torch
+
+# -------- Vector Database --------
+chromadb
+
+# -------- PDF Processing --------
+pymupdf
+pypdf
+
+# -------- Text Splitting --------
+langchain-text-splitters
+
+# -------- Utilities --------
+python-dotenv
+numpy
+
+
+
+
+python-multipart
