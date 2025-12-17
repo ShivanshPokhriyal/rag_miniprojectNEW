@@ -1,9 +1,12 @@
 import streamlit as st
 import requests
+import os
 
-QUERY_URL = "http://127.0.0.1:8000/query"
-UPLOAD_URL = "http://127.0.0.1:8000/upload"
-RESET_URL = "http://127.0.0.1:8000/reset"
+BACKEND_URL = os.getenv("BACKEND_URL", "http://127.0.0.1:8000")
+
+QUERY_URL = f"{BACKEND_URL}/query"
+UPLOAD_URL = f"{BACKEND_URL}/upload"
+RESET_URL = f"{BACKEND_URL}/reset"
 
 
 
@@ -116,4 +119,5 @@ if query:
                 answer = f"Connection error: {str(e)}"
 
         st.markdown(answer)
+
         st.session_state.messages.append({"role": "assistant", "content": answer})
